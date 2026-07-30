@@ -527,6 +527,11 @@ def render_rules(rules: pd.DataFrame) -> None:
         st.markdown(f"""<div class="pg-rule"><div class="pg-rule-top"><span class="pg-rule-title">{html.escape(str(rule['Rule']))}</span><b>{float(rule['Contribution']):.2f} contribution</b></div><div class="pg-rule-meta">{html.escape(str(rule['Explanation']))}</div><div class="pg-rule-meta">Raw sub-score: {float(rule['Raw sub-score']):g} · Weight: {float(rule['Weight']):g}</div><div class="pg-rule-bar"><span style="width:{share:.1f}%"></span></div></div>""", unsafe_allow_html=True)
 
 
+def clear_single_url() -> None:
+    st.session_state.scanner_url = ""
+    st.session_state.single_result = None
+
+
 def render_single_url_page(weights: dict[str, float], profile: str, low_high: float, med_high: float) -> None:
     st.markdown("#### URL Scanner")
     if "single_result" not in st.session_state:
@@ -546,11 +551,12 @@ def render_single_url_page(weights: dict[str, float], profile: str, low_high: fl
         submitted = analyse_col.button(
             "Analyse URL", type="primary", key="analyse_url", width="stretch"
         )
-        clear = clear_col.button("Clear", key="clear_url", width="stretch")
-    if clear:
-        st.session_state.single_result = None
-        st.session_state.scanner_url = ""
-        st.rerun()
+        clear_col.button(
+            "Clear",
+            key="clear_url",
+            width="stretch",
+            on_click=clear_single_url,
+        )
     if submitted:
         valid, error, note = validate_url(url)
         if not valid:
