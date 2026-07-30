@@ -1,0 +1,162 @@
+{
+  "full_dataset_rows": 235795,
+  "after_dedup_sample_rows": 10000,
+  "dev_n": 6000,
+  "val_n": 2000,
+  "test_n": 2000,
+  "dev_label_counts": {
+    "0": 3000,
+    "1": 3000
+  },
+  "val_label_counts": {
+    "1": 1000,
+    "0": 1000
+  },
+  "test_label_counts": {
+    "0": 1000,
+    "1": 1000
+  },
+  "eda_dev_trigger_rates": {
+    "ip_address": {
+      "phishing_trigger_rate": 0.006333333333333333,
+      "legitimate_trigger_rate": 0.0
+    },
+    "punycode": {
+      "phishing_trigger_rate": 0.0026666666666666666,
+      "legitimate_trigger_rate": 0.0
+    },
+    "at_symbol": {
+      "phishing_trigger_rate": 0.012,
+      "legitimate_trigger_rate": 0.0
+    },
+    "shortener": {
+      "phishing_trigger_rate": 0.009,
+      "legitimate_trigger_rate": 0.0
+    },
+    "url_length": {
+      "phishing_trigger_rate": 0.11666666666666667,
+      "legitimate_trigger_rate": 0.0
+    },
+    "subdomain": {
+      "phishing_trigger_rate": 0.21466666666666667,
+      "legitimate_trigger_rate": 0.062
+    },
+    "keyword": {
+      "phishing_trigger_rate": 0.06966666666666667,
+      "legitimate_trigger_rate": 0.0
+    },
+    "special_pattern": {
+      "phishing_trigger_rate": 0.051666666666666666,
+      "legitimate_trigger_rate": 0.0003333333333333333
+    },
+    "https_absent": {
+      "phishing_trigger_rate": 0.512,
+      "legitimate_trigger_rate": 0.0
+    },
+    "digit_hyphen_ratio": {
+      "phishing_trigger_rate": 0.15533333333333332,
+      "legitimate_trigger_rate": 0.0003333333333333333
+    }
+  },
+  "baseline_val_metrics": {
+    "precision": 1.0,
+    "recall": 0.045,
+    "specificity": 1.0,
+    "accuracy": 0.5225,
+    "f1": 0.0861244019138756,
+    "balanced_accuracy": 0.5225,
+    "tp": 45,
+    "fp": 0,
+    "fn": 955,
+    "tn": 1000
+  },
+  "calibration_used_precision_floor": true,
+  "calibrated_weights": {
+    "ip_address": 2,
+    "punycode": 2,
+    "at_symbol": 3,
+    "shortener": 3,
+    "url_length": 3,
+    "subdomain": 3,
+    "keyword": 2,
+    "special_pattern": 2,
+    "https_absent": 2,
+    "digit_hyphen_ratio": 2
+  },
+  "calibrated_low_high": 2,
+  "calibrated_med_high": 7,
+  "calibrated_val_metrics": {
+    "precision": 0.9527027027027027,
+    "recall": 0.282,
+    "specificity": 0.986,
+    "accuracy": 0.634,
+    "f1": 0.4351851851851852,
+    "balanced_accuracy": 0.634,
+    "tp": 282,
+    "fp": 14,
+    "fn": 718,
+    "tn": 986
+  },
+  "n_configs_tried": 40,
+  "test_metrics": {
+    "precision": 0.9581881533101045,
+    "recall": 0.275,
+    "specificity": 0.988,
+    "accuracy": 0.6315,
+    "f1": 0.4273504273504274,
+    "balanced_accuracy": 0.6315,
+    "tp": 275,
+    "fp": 12,
+    "fn": 725,
+    "tn": 988
+  },
+  "test_metrics_high_only": {
+    "precision": 1.0,
+    "recall": 0.017,
+    "specificity": 1.0,
+    "accuracy": 0.5085,
+    "f1": 0.033431661750245825,
+    "balanced_accuracy": 0.5085,
+    "tp": 17,
+    "fp": 0,
+    "fn": 983,
+    "tn": 1000
+  },
+  "baseline_test_metrics": {
+    "precision": 1.0,
+    "recall": 0.04,
+    "specificity": 1.0,
+    "accuracy": 0.52,
+    "f1": 0.07692307692307693,
+    "balanced_accuracy": 0.52,
+    "tp": 40,
+    "fp": 0,
+    "fn": 960,
+    "tn": 1000
+  },
+  "false_positive_examples": [
+    {"url": "https://www.bhi.nsw.gov.au", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.city.kochi.kochi.jp", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.sos.state.mn.us", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.town.taketoyo.lg.jp", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.ci.ramsey.mn.us", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.atomic.physics.lu.se", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.nes.scot.nhs.uk", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "https://www.thss.tsinghua.edu.cn", "score": 3.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 2, "keyword": 0, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}}
+  ],
+  "false_negative_examples": [
+    {"url": "http://www.binglbalts.com", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}},
+    {"url": "http://co-postoffice.com/verification/", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}},
+    {"url": "http://supportrcu.com", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}},
+    {"url": "http://zato-a.ru/content/gallery/.section.php", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}},
+    {"url": "http://www.dronebazar.com", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}},
+    {"url": "https://metamask-logines.godaddysites.com/", "score": 1.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 1, "special_pattern": 0, "https_absent": 0, "digit_hyphen_ratio": 0}},
+    {"url": "http://www.helaa.com", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}},
+    {"url": "http://rvqarxsyac.duckdns.org", "score": 2.0, "subscores": {"ip_address": 0, "punycode": 0, "at_symbol": 0, "shortener": 0, "url_length": 0, "subdomain": 0, "keyword": 0, "special_pattern": 0, "https_absent": 1, "digit_hyphen_ratio": 0}}
+  ],
+  "test_risk_category_distribution": {
+    "low": 1713,
+    "medium": 270,
+    "high": 17
+  }
+}

@@ -1,0 +1,11 @@
+# PhishGuard — runtime dependencies (pinned for reproducibility).
+# Only packages the application actually imports are listed.
+#   dashboard.py imports: streamlit, pandas, altair
+#   features.py  imports: re, ipaddress, urllib.parse (Python standard library only)
+# numpy is pinned explicitly because pandas depends on it and the two pins must
+# remain a compatible pair. No other third-party package is required to run the app.
+
+streamlit==1.60.0
+pandas==2.2.3
+numpy==2.2.2
+altair==6.2.2

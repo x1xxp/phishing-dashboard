@@ -1,0 +1,74 @@
+# --- Python bytecode / build artefacts -------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---------------------------------------------------
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# --- Environment / secrets --------------------------------------------------
+.env
+.env.*
+*.env
+secrets.toml
+.streamlit/secrets.toml
+
+# --- Logs and temporary files -----------------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+~$*
+
+# --- Test / tooling artefacts -----------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.ipynb_checkpoints/
+tmp/
+temp/
+_scratch/
+test_output/
+
+# --- Streamlit runtime artefacts (config.toml is kept and tracked) ----------
+.streamlit/cache/
+.streamlit/runtime/
+.streamlit/*.log
+
+# --- Local editor / agent settings ------------------------------------------
+.vscode/
+.idea/
+.claude/
+*.code-workspace
+
+# --- OS noise ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Duplicate/backup folders created during clean-up -----------------------
+_duplicate_backup_*/
+
+# ---------------------------------------------------------------------------
+# Deliberately TRACKED (do not add to this file):
+#   dashboard.py, features.py, results.json, requirements.txt,
+#   README.md, .streamlit/config.toml, data/phiUSIIL.zip
+# ---------------------------------------------------------------------------
+!data/phiUSIIL.zip
