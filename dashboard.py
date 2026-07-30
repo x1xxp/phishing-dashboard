@@ -20,12 +20,12 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-# Guarantee that the sibling features.py is importable even when the interpreter
-# was started from a different working directory.
+
+
 if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from features import (  # noqa: E402  (import follows the sys.path guard above)
+from features import (  
     BANDED_FEATURES,
     DEFAULT_WEIGHTS,
     FEATURE_NAMES,
@@ -37,8 +37,8 @@ from features import (  # noqa: E402  (import follows the sys.path guard above)
 
 st.set_page_config(page_title="PhishGuard | URL Risk Assessment", page_icon="🛡️", layout="wide")
 
-# Resolve every project file relative to this module, never to the terminal's
-# current working directory, so the app runs from any location.
+
+
 BASE_DIR = Path(__file__).resolve().parent
 RESULTS_PATH = BASE_DIR / "results.json"
 DATA_DIR = BASE_DIR / "data"
@@ -78,7 +78,7 @@ FEATURE_EXPLANATIONS = {
     "digit_hyphen_ratio": "The URL contains an elevated proportion of digits or hyphens.",
 }
 
-# Risk colours are tuned for the dark canvas: high chroma, AA-legible on #070c16.
+
 RISK_STYLES = {
     "low": {
         "label": "Low Risk", "color": "#34d399", "tint": "#34d399",
