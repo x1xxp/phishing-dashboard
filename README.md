@@ -1,8 +1,7 @@
 # PhishGuard — Phishing URL Risk Assessment Dashboard
 
 An interactive Streamlit dashboard for **rule-based, explainable phishing URL risk
-assessment**, designed and developed by **Abdalla** for a Level 6 Computer Science
-dissertation.
+assessment**, designed and developed by **Abdalla**.
 
 ## Live demo
 
