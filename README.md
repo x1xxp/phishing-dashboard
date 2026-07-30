@@ -1,7 +1,12 @@
 # PhishGuard — Phishing URL Risk Assessment Dashboard
 
 An interactive Streamlit dashboard for **rule-based, explainable phishing URL risk
-assessment**, built for a Level 6 Computer Science dissertation.
+assessment**, designed and developed by **Abdalla** for a Level 6 Computer Science
+dissertation.
+
+## Live demo
+
+[Launch PhishGuard](https://phishguard-url-risk.streamlit.app/)
 
 The application extracts structural features from a URL string (IP address used as a
 hostname, Punycode, `@` symbol, URL-shortening services, URL length, subdomain depth,
